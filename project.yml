@@ -1,0 +1,26 @@
+name: iBuildApp
+targets:
+  iBuildApp:
+    type: application
+    platform: iOS
+    deploymentTarget: "15.0"
+    sources: [Sources]
+    info:
+      path: Info.plist
+      properties:
+        CFBundleIdentifier: com.ibuild.${PROJECT_NAME}
+        CFBundleName: ${PROJECT_NAME}
+        CFBundleDisplayName: ${PROJECT_NAME}
+        CFBundleVersion: "1.0.0"
+        CFBundleShortVersionString: "1.0"
+        UILaunchStoryboardName: LaunchScreen
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.ibuild.${PROJECT_NAME}
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+        SWIFT_VERSION: 5.0
